@@ -26,6 +26,35 @@ AntTP was formally known as sn_httpd.
 - Native integration of the `autonomi` libraries into Actix web framework. These are both written in Rust to provide
   smooth integration. As Actix is core to `antTP`, it can be extended for specific use cases easily. 
   
+## Recent Improvements
+
+The codebase has undergone several improvements to enhance maintainability, reliability, and security:
+
+1. **Comprehensive Documentation**
+   - Added detailed documentation for all modules, structs, and functions
+   - Included parameter and return value descriptions
+   - Added explanatory comments for complex code sections
+
+2. **Improved Error Handling**
+   - Replaced `.unwrap()` and `.expect()` calls with proper error handling
+   - Added more detailed error messages
+   - Implemented graceful error recovery where possible
+
+3. **Code Robustness**
+   - Added null checks and boundary validations
+   - Improved path handling for better cross-platform compatibility
+   - Enhanced string handling to prevent UTF-8 related issues
+
+4. **Performance Optimizations**
+   - Improved route resolution with more efficient glob matching
+   - Enhanced caching mechanisms
+   - Reduced unnecessary string allocations
+
+5. **Security Enhancements**
+   - Improved input validation
+   - Better handling of sensitive information (e.g., private keys)
+   - Added more secure defaults
+
 ## TODO
 
 - Built-in accounting features to allow hosts fund bandwidth usage via Autonomi Network Tokens. While Autonomi doesn't
@@ -34,6 +63,10 @@ AntTP was formally known as sn_httpd.
   always on Autonomi, irrespective of where `antTP` is hosted!
 - Refactoring, performance, stability - `antTP` is highly experimental and should only be used by the adventurous!
 - Unit testing
+- Add rate limiting for public-facing deployments
+- Implement content compression for better performance
+- Add support for range requests to enable partial content downloads
+- Enhance content type detection for a wider range of file types
 
 ## Build Instructions
 
